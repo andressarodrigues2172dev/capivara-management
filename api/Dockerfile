@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci  # Mude de npm install para npm ci
 
 COPY . .
 
