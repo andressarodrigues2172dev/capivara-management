@@ -4,14 +4,17 @@ FROM node:22
 # Crie o diretório de trabalho
 WORKDIR /app
 
-# Copie o package.json e o package-lock.json para a fase de construção
+# Copie apenas os arquivos de dependência
 COPY package*.json ./
 
-# Instale as dependências
-RUN npm install --omit=dev
+# Instale as dependências, evitando devDependencies
+RUN npm install --omit=dev 
 
 # Copie o restante da aplicação
 COPY . .
+
+# Remova o diretório de cache do npm se existir
+RUN rm -rf /app/node_modules/.cache
 
 # Exponha a porta da aplicação
 EXPOSE 3000
