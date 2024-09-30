@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# Limpe o cache do npm antes de executar npm ci para evitar conflitos
+
 RUN npm cache clean --force && npm ci
 
 COPY . .
