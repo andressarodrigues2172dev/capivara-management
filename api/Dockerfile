@@ -4,8 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# Remove o cache para evitar conflitos
-RUN rm -rf /app/node_modules/.cache && npm ci
+RUN npm install
 
 COPY . .
 
