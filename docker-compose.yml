@@ -21,17 +21,14 @@ services:
     build:
       context: ./api
     ports:
-      - "${NODE_LOCAL_PORT}:${NODE_DOCKER_PORT}"
+      -  "${NODE_LOCAL_PORT}:${NODE_DOCKER_PORT}"
     networks:
       - capivara_net
     depends_on:
       db:
         condition: service_healthy
     environment:
-      MYSQL_HOST: db 
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USERNAME: ${MYSQL_USERNAME}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+       DATABASE_URL=${DATABASE_URL}  # Use a variável de conexão com o banco de dados
 
   frontend:
     build:
