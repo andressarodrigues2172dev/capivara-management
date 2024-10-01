@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nome-do-seu-serviço
+    env: docker
+    plan: starter
+    docker:
+      dockerfilePath: ./Dockerfile
+    buildCommand: npm install
+    startCommand: npm start
