@@ -2,16 +2,17 @@ require('dotenv').config();
 
 const Sequelize = require('sequelize');
 
-// Usando a URL completa do MySQL fornecida pelo Railway
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialect: 'mysql',               // Dialeto (MySQL)
-  dialectOptions: {
-    ssl: {
-      require: true, // Ative isso se o banco de dados exigir SSL (verifique a documentação do Railway)
-      rejectUnauthorized: false, // Permite certificados SSL auto-assinados
-    },
-  },
-});
+// Configuração da conexão Sequelize usando variáveis de ambiente
+const sequelize = new Sequelize(
+  process.env.MYSQL_DATABASE,  // Nome do banco de dados
+  process.env.MYSQL_USERNAME,  // Nome de usuário MySQL
+  process.env.MYSQL_PASSWORD,   // Senha do MySQL
+  {
+    host: process.env.MYSQL_HOST,  // Host do MySQL
+    port: process.env.MYSQL_DOCKER_PORT, // Adicione esta linha
+    dialect: 'mysql',               // Dialeto (MySQL)
+  }
+);
 
 module.exports = sequelize;
 

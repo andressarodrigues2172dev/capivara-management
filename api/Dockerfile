@@ -14,7 +14,7 @@ RUN npm install --omit=dev
 COPY . .
 
 # Remova o diretório de cache do npm se existir
-RUN rm -rf /app/node_modules/.cache || true
+RUN rm -rf /app/node_modules/cache || true
 
 # Exponha a porta da aplicação
 EXPOSE 3000
