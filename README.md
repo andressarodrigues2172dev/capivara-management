@@ -112,7 +112,7 @@ Certifique-se de que o Docker está instalado e funcionando.
 docker-compose up --build
 ```
 
- 7.Acesse a aplicação em http://localhost:3000.
+ 7.Acesse a aplicação em http://localhost:5173.
 
 ## 🧑‍💻 Como Contribuir
 
