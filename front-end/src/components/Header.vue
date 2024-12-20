@@ -15,7 +15,7 @@
                 <ul>
                     <a href="./"><img src="../assets/logo (2).png" alt="capivara" id="menu-logo"></a>
                     <li><a href="/">Home</a></li>
-                    <li><router-link to="/Catalogo">catálogo</router-link></li>
+                    <li><router-link to="/Catalogo">Catálogo</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -92,6 +92,7 @@ nav{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    font-weight: bold;
 }
 
 /* Itens da lista no menu */
@@ -106,6 +107,8 @@ ul li{
 
 ul li a{
     color: white;
+    font-size: medium;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao texto */
 }
 
 /* Quando o menu está ativo, exibimos ele */

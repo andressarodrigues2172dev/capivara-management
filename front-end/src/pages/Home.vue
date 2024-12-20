@@ -1,7 +1,8 @@
 <template>
   <main>
     <div class="text-top">
-      <h1>Bem vindo ao catálogo de <b>capivaras!</b></h1>
+      <h1>Capivara Management System</h1>
+      <h2>O seu catálogo de capivaras</h2>
     </div>
 
     <img class="subscribe" src="../assets/foto_home-sem_fundo.png" alt="capivara">
@@ -22,7 +23,7 @@ export default {
 
 <style scoped>
 main {
-  background-color: var(--color-background-home);
+  background-color:#dbb89a ;
   min-height: 100vh;
   justify-content: center;
   text-align: center; 
@@ -30,13 +31,24 @@ main {
 }
 
 b {
-  color: rgba(100, 52, 52, 0.747);
+  color: #bc7444;
 }
 
 .text-top {
   color: var(--color-text-light);
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao texto */
+  
+}
+
+.text-top h1 {
+  margin-bottom: 20px; /* Adiciona espaço abaixo do <h1> */
+}
+
+.text-top h2 {
+  margin-top: 0; 
+  color: #6d5b4b; /* Marrom acinzentado */
 }
 
 .text-bottom {
