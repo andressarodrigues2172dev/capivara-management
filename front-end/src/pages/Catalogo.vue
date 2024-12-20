@@ -96,10 +96,6 @@
       </form>
     </div>
 
-    <div v-else>
-      <p></p>
-    </div>
-
   </div>
 </template>
 

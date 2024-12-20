@@ -36,10 +36,12 @@ b {
 
 .text-top {
   color: var(--color-text-light);
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao texto */
-  
+  @media(max-width: 1440){
+    font-size: 20px;
+  }
 }
 
 .text-top h1 {
